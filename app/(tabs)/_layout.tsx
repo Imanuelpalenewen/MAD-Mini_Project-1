@@ -1,47 +1,54 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Tabs } from 'expo-router'
+import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
-const TabsLayout = () => {
+export default function TabsLayout() {
   return (
-    <Tabs screenOptions={{
-        tabBarActiveTintColor:"red",
-        tabBarInactiveTintColor:"green",
-        tabBarStyle:{
-            backgroundColor:"#1e293b",
-            borderTopWidth: 1,
-            borderTopColor: "yellow",
-            height: 90,
-            paddingBottom: 30,
-            paddingTop: 10
+    <Tabs 
+      screenOptions={{
+        tabBarActiveTintColor: "#DC143C",      // Crimson red 
+        tabBarInactiveTintColor: "#6B7280",    // Gray
+        tabBarStyle: {
+          backgroundColor: "#0D0D0D",          // Near-black 
+          borderTopWidth: 1,
+          borderTopColor: "#1A1A1A",           // Dark gray border
+          height: 70,
+          paddingBottom: 10,
+          paddingTop: 10,
         },
         tabBarLabelStyle: {
-            fontSize: 12,
-            fontWeight: "600"
+          fontSize: 12,
+          fontWeight: "600",
         },
         headerShown: false,
-    }}>
-        <Tabs.Screen
-            name="index" 
-            options={{
-                title: "Todos",
-                tabBarIcon: ({color, size}) => (
-                    <Ionicons name="flash" color={color} size={size} />
-                ) 
-            }}        
-        />
-        <Tabs.Screen
-            name="settings" 
-            options={{
-                title: "Settings",
-                tabBarIcon: ({color, size}) => (
-                    <Ionicons name="settings" color={color} size={size} />
-                ) 
-            }}        
-        />
+      }}
+    >
+      <Tabs.Screen
+        name="myProfile"
+        options={{
+          title: "My Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="myEducation"
+        options={{
+          title: "My Education",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="school" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="myExperience"
+        options={{
+          title: "My Experience",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="briefcase" color={color} size={size} />
+          ),
+        }}
+      />
     </Tabs>
-  )
+  );
 }
-
-export default TabsLayout
