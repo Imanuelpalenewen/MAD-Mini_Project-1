@@ -25,6 +25,7 @@ const MyProfile = () => {
   return (
     <ScrollView style={styles.container}>
       
+      {/* Header section */}
       <View style={styles.header}>
         <View style={styles.photoContainer}>
           <Image 
@@ -38,6 +39,7 @@ const MyProfile = () => {
         <Text style={styles.nim}>NIM: {profileData.nim}</Text>
       </View>
 
+      {/* About Me section */}
       <View style={styles.section}>
         <View style={styles.sectionHeader}>
           <Ionicons name="person-outline" size={24} color="#DC143C" />
@@ -46,6 +48,7 @@ const MyProfile = () => {
         <Text style={styles.bio}>{profileData.bio}</Text>
       </View>
 
+      {/* Contact Info section */}
       <View style={styles.section}>
         <View style={styles.sectionHeader}>
           <Ionicons name="call-outline" size={24} color="#DC143C" />
@@ -68,7 +71,7 @@ const MyProfile = () => {
         </View>
       </View>
 
-      
+      {/* Bottom spacer for scroll padding */}
       <View style={{ height: 40 }} />
     </ScrollView>
   );
