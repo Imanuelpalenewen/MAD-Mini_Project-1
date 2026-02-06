@@ -36,7 +36,7 @@ export default function MyEducation() {
       institution: "SD Inpres Sarongsong 1",
       major: "-",
       period: "2011 - 2016",
-      location: "Minut, Sulawesi Utara",
+      location: "Airmadidi, Sulawesi Utara",
       description: "Menang juara Lomba menggambar tingkat Kabupaten.",
     },
   ];
@@ -73,7 +73,7 @@ export default function MyEducation() {
       >
         {educationData.map((edu, index) => (
           <View key={edu.id} style={styles.card}>
-            
+
             {/* Timeline dot */}
             <View style={styles.timeline}>
               <View style={styles.timelineDot} />
